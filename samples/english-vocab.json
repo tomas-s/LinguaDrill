@@ -1,0 +1,12 @@
+{
+  "name": "English Vocabulary",
+  "cards": [
+    { "phrase": "made-up", "translation": "vymyslený" },
+    { "phrase": "Stab", "translation": "pobodať" },
+    { "phrase": "Abandon", "translation": "opustiť, vzdať sa" },
+    { "phrase": "Spoil", "translation": "skazit" },
+    { "phrase": "Goofy", "translation": "prasteny, silly" },
+    { "phrase": "Angular", "translation": "hranaty" },
+    { "phrase": "so over", "translation": "exhaused" }
+  ]
+}
