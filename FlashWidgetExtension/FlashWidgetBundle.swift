@@ -17,7 +17,7 @@ struct FlashWidget: Widget {
                 .widgetBackground()
         }
         .configurationDisplayName("Flash Card")
-        .description("Zobrazí aktuálnu kartičku z tvojho decku.")
+        .description("Shows the current card from your deck.")
         .supportedFamilies([.accessoryRectangular])
     }
 }

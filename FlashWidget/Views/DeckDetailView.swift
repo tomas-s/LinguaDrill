@@ -50,9 +50,9 @@ struct DeckDetailView: View {
             Image(systemName: "rectangle.on.rectangle")
                 .font(.system(size: 48))
                 .foregroundStyle(.secondary)
-            Text("Žiadne kartičky")
+            Text("No Cards")
                 .font(.headline)
-            Text("Pridaj prvú kartičku pomocou +")
+            Text("Add your first card using +")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }

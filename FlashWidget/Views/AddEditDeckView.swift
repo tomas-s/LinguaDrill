@@ -9,15 +9,15 @@ struct AddEditDeckView: View {
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Názov decku", text: $name)
+                TextField("Deck Name", text: $name)
             }
-            .navigationTitle("Nový deck")
+            .navigationTitle("New Deck")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Zrušiť") { dismiss() }
+                    Button("Cancel") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Uložiť") {
+                    Button("Save") {
                         store.addDeck(Deck(name: name.trimmingCharacters(in: .whitespaces)))
                         dismiss()
                     }

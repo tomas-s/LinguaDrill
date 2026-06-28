@@ -4,9 +4,9 @@ struct ContentView: View {
     var body: some View {
         TabView {
             DeckListView()
-                .tabItem { Label("Decky", systemImage: "rectangle.stack") }
+                .tabItem { Label("Decks", systemImage: "rectangle.stack") }
             SettingsView()
-                .tabItem { Label("Nastavenia", systemImage: "gear") }
+                .tabItem { Label("Settings", systemImage: "gear") }
         }
     }
 }

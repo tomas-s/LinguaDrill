@@ -21,11 +21,13 @@
 		54501368715632FDAC103C6C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909E4E617864AF2D884AB3E9 /* WidgetKit.framework */; };
 		57D4B3B581687A9EC241E9E3 /* AddEditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCC8C95CB43023CB6DD6E9 /* AddEditCardView.swift */; };
 		64A468DDD5DB533D39F13914 /* DeckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB56DCC5DBA8BEEAFFA5D3 /* DeckListView.swift */; };
+		7AA6C1EEFD7127A6871D5A6D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DF5DCD64DC84AD2B554F13C6 /* Localizable.xcstrings */; };
 		8E0F0975B479718C8837D378 /* DeckStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5CC66B48305EC4B9B1522C /* DeckStore.swift */; };
 		8E9307C67E2212BBD3F2995B /* FlashWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF54107D2D53582DCA1FE67 /* FlashWidgetBundle.swift */; };
 		90870AD40E1239FE8EF1CCA5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909E4E617864AF2D884AB3E9 /* WidgetKit.framework */; };
 		91AE2ACB0C6AE1E582766240 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7A19B542669B3B4AA90D6F /* SettingsView.swift */; };
 		ADEE56AF091891F142308432 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0B5BCD8F1C293479328F79 /* Provider.swift */; };
+		B579E964C15EF73A45C7D21D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 40A7C91F0AF4E9643F5B8F95 /* Localizable.xcstrings */; };
 		C494DCD749EFE8DA75003D05 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E17935B9D6B339880BF85 /* Deck.swift */; };
 		E0B78EB97CFE1FF59006C8A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE215E020B75246061E9650E /* ContentView.swift */; };
 		F42A0553C037C45A5BEEE010 /* WidgetSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB88E268F785FCEF2C5F578 /* WidgetSettings.swift */; };
@@ -58,6 +60,7 @@
 /* Begin PBXFileReference section */
 		0F0B5BCD8F1C293479328F79 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		11EB56DCC5DBA8BEEAFFA5D3 /* DeckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListView.swift; sourceTree = "<group>"; };
+		40A7C91F0AF4E9643F5B8F95 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		594026AAA31AFFA54B85B9B6 /* FlashWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FlashWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5CC66B48305EC4B9B1522C /* DeckStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckStore.swift; sourceTree = "<group>"; };
 		6311A77270A18F864EC171E6 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		AE215E020B75246061E9650E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B42478CB524B03B182FA4B41 /* FlashWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlashWidgetExtension.entitlements; sourceTree = "<group>"; };
 		DBCEFBF1B97A62517EBDF84A /* AddEditDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditDeckView.swift; sourceTree = "<group>"; };
+		DF5DCD64DC84AD2B554F13C6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		EB2417CAD03A2D6E01D1067B /* DeckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailView.swift; sourceTree = "<group>"; };
 		F25D13FFD034C540D956D739 /* FlashWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6358130F54C2295D8FB59E /* FlashWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlashWidget.entitlements; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				89B6E5F6DBB233A1A1702385 /* FlashWidgetEntryView.swift */,
 				B42478CB524B03B182FA4B41 /* FlashWidgetExtension.entitlements */,
 				64DA95E66335FB8111D80DDF /* Info.plist */,
+				DF5DCD64DC84AD2B554F13C6 /* Localizable.xcstrings */,
 				0F0B5BCD8F1C293479328F79 /* Provider.swift */,
 			);
 			path = FlashWidgetExtension;
@@ -188,6 +193,7 @@
 				FC6358130F54C2295D8FB59E /* FlashWidget.entitlements */,
 				84CD85193AD1AED7333F9E97 /* FlashWidgetApp.swift */,
 				AD160ADB236119BC152B6D71 /* Info.plist */,
+				40A7C91F0AF4E9643F5B8F95 /* Localizable.xcstrings */,
 				A57CCA497C10795C89BFC2C9 /* Views */,
 			);
 			path = FlashWidget;
@@ -201,6 +207,7 @@
 			buildConfigurationList = 5C7BB56F028126BABDC94D91 /* Build configuration list for PBXNativeTarget "FlashWidget" */;
 			buildPhases = (
 				D784D06FF595A9F45F10AFB3 /* Sources */,
+				9141FCA40A2405F310DF6223 /* Resources */,
 				B424D6B18DD879511B999E42 /* Frameworks */,
 				7FC84D185CB09809F3FF43B2 /* Embed Foundation Extensions */,
 			);
@@ -221,6 +228,7 @@
 			buildConfigurationList = C8A83FE85DAE8394775D49D3 /* Build configuration list for PBXNativeTarget "FlashWidgetExtension" */;
 			buildPhases = (
 				0BCB3153D34966766C310813 /* Sources */,
+				DAB54BBE27C8A70072641615 /* Resources */,
 				4A426D0BC97E3B096C7E9516 /* Frameworks */,
 			);
 			buildRules = (
@@ -248,7 +256,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				cs,
 				en,
+				sk,
 			);
 			mainGroup = 4D248E1363C7CD6283F84F33;
 			minimizedProjectReferenceProxies = 1;
@@ -262,6 +272,25 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9141FCA40A2405F310DF6223 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B579E964C15EF73A45C7D21D /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB54BBE27C8A70072641615 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AA6C1EEFD7127A6871D5A6D /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0BCB3153D34966766C310813 /* Sources */ = {

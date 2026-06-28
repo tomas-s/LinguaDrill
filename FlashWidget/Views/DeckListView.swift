@@ -21,7 +21,7 @@ struct DeckListView: View {
                     }
                 }
             }
-            .navigationTitle("Decky")
+            .navigationTitle("Decks")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) { EditButton() }
                 ToolbarItem(placement: .primaryAction) {
@@ -39,9 +39,9 @@ struct DeckListView: View {
             Image(systemName: "rectangle.stack")
                 .font(.system(size: 48))
                 .foregroundStyle(.secondary)
-            Text("Žiadne decky")
+            Text("No Decks")
                 .font(.headline)
-            Text("Pridaj prvý deck pomocou +")
+            Text("Add your first deck using +")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }

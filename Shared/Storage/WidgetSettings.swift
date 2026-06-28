@@ -10,12 +10,12 @@ enum CardInterval: String, CaseIterable, Codable {
 
     var displayName: String {
         switch self {
-        case .oneHour:    return "1 hodina"
-        case .twoHours:   return "2 hodiny"
-        case .fourHours:  return "4 hodiny"
-        case .eightHours: return "8 hodín"
-        case .oneDay:     return "24 hodín"
-        case .twoDays:    return "2 dni"
+        case .oneHour:    return String(localized: "1 hour")
+        case .twoHours:   return String(localized: "2 hours")
+        case .fourHours:  return String(localized: "4 hours")
+        case .eightHours: return String(localized: "8 hours")
+        case .oneDay:     return String(localized: "24 hours")
+        case .twoDays:    return String(localized: "2 days")
         }
     }
 

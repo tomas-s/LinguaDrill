@@ -6,7 +6,7 @@ struct FlashWidgetEntryView: View {
 
     var body: some View {
         if entry.isEmpty {
-            Text("Vyber deck v aplikácii")
+            Text("Select a deck in the app")
                 .font(.caption2)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)

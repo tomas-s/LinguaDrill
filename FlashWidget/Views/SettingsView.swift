@@ -15,25 +15,25 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section("Widget") {
-                    Picker("Aktívny deck", selection: $selectedDeckId) {
-                        Text("Žiadny").tag(nil as UUID?)
+                    Picker("Active Deck", selection: $selectedDeckId) {
+                        Text("None").tag(nil as UUID?)
                         ForEach(store.decks) { deck in
                             Text(deck.name).tag(deck.id as UUID?)
                         }
                     }
                     Picker("Interval", selection: $selectedInterval) {
                         ForEach(CardInterval.allCases, id: \.self) { interval in
-                            Text(interval.displayName).tag(interval)
+                            Text(LocalizedStringKey(interval.displayName)).tag(interval)
                         }
                     }
                 }
                 Section("Import") {
-                    Button("Importovať deck z JSON") {
+                    Button("Import Deck from JSON") {
                         showingImport = true
                     }
                 }
             }
-            .navigationTitle("Nastavenia")
+            .navigationTitle("Settings")
             .onChange(of: selectedDeckId) { newValue in
                 WidgetSettings.selectedDeckId = newValue
                 WidgetSettings.currentCardIndex = 0
@@ -49,10 +49,10 @@ struct SettingsView: View {
             ) { result in
                 handleImport(result)
             }
-            .alert("Chyba importu", isPresented: $showingImportError) {
+            .alert("Import Error", isPresented: $showingImportError) {
                 Button("OK") {}
             } message: {
-                Text(importError ?? "Neznáma chyba")
+                Text(importError ?? String(localized: "Unknown error"))
             }
         }
     }
@@ -64,7 +64,7 @@ struct SettingsView: View {
             showingImportError = true
         case .success(let url):
             guard url.startAccessingSecurityScopedResource() else {
-                importError = "Nemáš prístup k súboru"
+                importError = String(localized: "You don't have access to the file")
                 showingImportError = true
                 return
             }
@@ -75,12 +75,12 @@ struct SettingsView: View {
 
                 for card in imported.cards {
                     if card.phrase.count > 40 {
-                        importError = "Fráza '\(card.phrase)' je dlhšia ako 40 znakov"
+                        importError = String(format: String(localized: "Phrase '%@' exceeds the 40 character limit"), card.phrase)
                         showingImportError = true
                         return
                     }
                     if card.translation.count > 80 {
-                        importError = "Preklad pre '\(card.phrase)' je dlhší ako 80 znakov"
+                        importError = String(format: String(localized: "Translation for '%@' exceeds the 80 character limit"), card.phrase)
                         showingImportError = true
                         return
                     }
@@ -92,7 +92,7 @@ struct SettingsView: View {
                 )
                 store.addDeck(deck)
             } catch {
-                importError = "Neplatný formát JSON. Skontroluj štruktúru súboru."
+                importError = String(localized: "Invalid JSON format. Please check the file structure.")
                 showingImportError = true
             }
         }

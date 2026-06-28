@@ -20,8 +20,8 @@ struct AddEditCardView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Fráza") {
-                    TextField("Fráza", text: $phrase)
+                Section("Phrase") {
+                    TextField("Phrase", text: $phrase)
                         .onChange(of: phrase) { newValue in
                             if newValue.count > phraseLimit {
                                 phrase = String(newValue.prefix(phraseLimit))
@@ -31,8 +31,8 @@ struct AddEditCardView: View {
                         .font(.caption)
                         .foregroundStyle(phrase.count >= phraseLimit ? .red : .secondary)
                 }
-                Section("Preklad / Definícia") {
-                    TextField("Preklad", text: $translation, axis: .vertical)
+                Section("Translation / Definition") {
+                    TextField("Translation", text: $translation, axis: .vertical)
                         .lineLimit(3)
                         .onChange(of: translation) { newValue in
                             if newValue.count > translationLimit {
@@ -44,13 +44,13 @@ struct AddEditCardView: View {
                         .foregroundStyle(translation.count >= translationLimit ? .red : .secondary)
                 }
             }
-            .navigationTitle("Nová kartička")
+            .navigationTitle("New Card")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Zrušiť") { dismiss() }
+                    Button("Cancel") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Uložiť") {
+                    Button("Save") {
                         guard var updated = deck else { return }
                         updated.cards.append(Card(phrase: phrase, translation: translation))
                         store.updateDeck(updated)
