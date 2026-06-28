@@ -221,6 +221,23 @@
         }
       }
     },
+    "Default" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výchozí"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Predvolené"
+          }
+        }
+      }
+    },
     "Import Deck from JSON" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -268,6 +285,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Neplatný formát JSON. Skontroluj štruktúru súboru."
+          }
+        }
+      }
+    },
+    "My Decks" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moje balíčky"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moje balíčky"
           }
         }
       }

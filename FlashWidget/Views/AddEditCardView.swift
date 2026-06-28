@@ -21,27 +21,40 @@ struct AddEditCardView: View {
         NavigationStack {
             Form {
                 Section("Phrase") {
-                    TextField("Phrase", text: $phrase)
-                        .onChange(of: phrase) { newValue in
-                            if newValue.count > phraseLimit {
-                                phrase = String(newValue.prefix(phraseLimit))
+                    HStack(alignment: .center) {
+                        TextField("Phrase", text: $phrase)
+                            .textInputAutocapitalization(.never)
+                            .onChange(of: phrase) { newValue in
+                                let normalized = newValue.lowercasingFirstLetter()
+                                let capped = normalized.count > phraseLimit
+                                    ? String(normalized.prefix(phraseLimit))
+                                    : normalized
+                                if capped != phrase { phrase = capped }
                             }
-                        }
-                    Text("\(phrase.count)/\(phraseLimit)")
-                        .font(.caption)
-                        .foregroundStyle(phrase.count >= phraseLimit ? .red : .secondary)
+                        Spacer()
+                        Text("\(phrase.count)/\(phraseLimit)")
+                            .font(.caption)
+                            .foregroundStyle(phrase.count >= phraseLimit ? .red : .secondary)
+                            .monospacedDigit()
+                    }
                 }
                 Section("Translation / Definition") {
-                    TextField("Translation", text: $translation, axis: .vertical)
-                        .lineLimit(3)
-                        .onChange(of: translation) { newValue in
-                            if newValue.count > translationLimit {
-                                translation = String(newValue.prefix(translationLimit))
+                    HStack(alignment: .top) {
+                        TextField("Translation", text: $translation, axis: .vertical)
+                            .lineLimit(3)
+                            .textInputAutocapitalization(.never)
+                            .onChange(of: translation) { newValue in
+                                let normalized = newValue.lowercasingFirstLetter()
+                                let capped = normalized.count > translationLimit
+                                    ? String(normalized.prefix(translationLimit))
+                                    : normalized
+                                if capped != translation { translation = capped }
                             }
-                        }
-                    Text("\(translation.count)/\(translationLimit)")
-                        .font(.caption)
-                        .foregroundStyle(translation.count >= translationLimit ? .red : .secondary)
+                        Text("\(translation.count)/\(translationLimit)")
+                            .font(.caption)
+                            .foregroundStyle(translation.count >= translationLimit ? .red : .secondary)
+                            .monospacedDigit()
+                    }
                 }
             }
             .navigationTitle("New Card")

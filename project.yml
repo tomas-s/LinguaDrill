@@ -22,11 +22,14 @@ targets:
     sources:
       - path: FlashWidget
       - path: Shared
+    resources:
+      - path: FlashWidget/Resources/DefaultDecks.json
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.slizik.flashwidget
         INFOPLIST_FILE: FlashWidget/Info.plist
         CODE_SIGN_ENTITLEMENTS: FlashWidget/FlashWidget.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     dependencies:
       - target: FlashWidgetExtension
       - sdk: WidgetKit.framework

@@ -1,5 +1,12 @@
 import Foundation
 
+extension String {
+    func lowercasingFirstLetter() -> String {
+        guard let first = first else { return self }
+        return first.lowercased() + dropFirst()
+    }
+}
+
 struct Card: Codable, Identifiable, Equatable {
     var id: UUID
     var phrase: String
@@ -7,7 +14,7 @@ struct Card: Codable, Identifiable, Equatable {
 
     init(id: UUID = UUID(), phrase: String, translation: String) {
         self.id = id
-        self.phrase = phrase
-        self.translation = translation
+        self.phrase = phrase.lowercasingFirstLetter()
+        self.translation = translation.lowercasingFirstLetter()
     }
 }

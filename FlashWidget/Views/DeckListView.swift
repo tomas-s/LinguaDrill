@@ -5,6 +5,9 @@ struct DeckListView: View {
     @EnvironmentObject var store: DeckStore
     @State private var showingAdd = false
 
+    private var defaultDecks: [Deck] { store.decks.filter { $0.isDefault } }
+    private var userDecks: [Deck]    { store.decks.filter { !$0.isDefault } }
+
     var body: some View {
         NavigationStack {
             Group {
@@ -12,12 +15,26 @@ struct DeckListView: View {
                     emptyState
                 } else {
                     List {
-                        ForEach(store.decks) { deck in
-                            NavigationLink(deck.name) {
-                                DeckDetailView(deckId: deck.id)
+                        if !defaultDecks.isEmpty {
+                            Section("Default") {
+                                ForEach(defaultDecks) { deck in
+                                    NavigationLink(deck.name) {
+                                        DeckDetailView(deckId: deck.id)
+                                    }
+                                }
+                                .onDelete { offsets in deleteDecks(offsets, from: defaultDecks) }
                             }
                         }
-                        .onDelete(perform: delete)
+                        if !userDecks.isEmpty {
+                            Section("My Decks") {
+                                ForEach(userDecks) { deck in
+                                    NavigationLink(deck.name) {
+                                        DeckDetailView(deckId: deck.id)
+                                    }
+                                }
+                                .onDelete { offsets in deleteDecks(offsets, from: userDecks) }
+                            }
+                        }
                     }
                 }
             }
@@ -47,13 +64,15 @@ struct DeckListView: View {
         }
     }
 
-    private func delete(at offsets: IndexSet) {
-        let deletedIds = offsets.map { store.decks[$0].id }
-        store.deleteDeck(at: offsets)
-        if let selectedId = WidgetSettings.selectedDeckId, deletedIds.contains(selectedId) {
-            WidgetSettings.selectedDeckId = nil
-            WidgetSettings.currentCardIndex = 0
-            WidgetCenter.shared.reloadAllTimelines()
+    private func deleteDecks(_ offsets: IndexSet, from source: [Deck]) {
+        let ids = offsets.map { source[$0].id }
+        ids.forEach { id in
+            store.deleteDeck(id: id)
+            if WidgetSettings.selectedDeckId == id {
+                WidgetSettings.selectedDeckId = nil
+                WidgetSettings.currentCardIndex = 0
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
     }
 }
