@@ -4,6 +4,7 @@ import UniformTypeIdentifiers
 
 struct SettingsView: View {
     @EnvironmentObject var store: DeckStore
+    @AppStorage("appLanguage") private var appLanguage: String = "system"
 
     @State private var selectedDeckId: UUID? = WidgetSettings.selectedDeckId
     @State private var selectedInterval: CardInterval = WidgetSettings.interval
@@ -11,9 +12,23 @@ struct SettingsView: View {
     @State private var importError: String?
     @State private var showingImportError = false
 
+    private let languageOptions: [(id: String, label: String)] = [
+        ("en", "English"),
+        ("sk", "Slovenčina"),
+        ("cs", "Čeština")
+    ]
+
     var body: some View {
         NavigationStack {
             Form {
+                Section("Language") {
+                    Picker("App Language", selection: $appLanguage) {
+                        Text("System Default").tag("system")
+                        ForEach(languageOptions, id: \.id) { lang in
+                            Text(lang.label).tag(lang.id)
+                        }
+                    }
+                }
                 Section("Widget") {
                     Picker("Active Deck", selection: $selectedDeckId) {
                         Text("None").tag(nil as UUID?)

@@ -170,6 +170,23 @@
         }
       }
     },
+    "App Language" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jazyk aplikace"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jazyk aplikácie"
+          }
+        }
+      }
+    },
     "Cancel" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -285,6 +302,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Neplatný formát JSON. Skontroluj štruktúru súboru."
+          }
+        }
+      }
+    },
+    "Language" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jazyk"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jazyk"
           }
         }
       }
@@ -452,6 +486,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nastavenia"
+          }
+        }
+      }
+    },
+    "System Default" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výchozí systém"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Predvolený systém"
           }
         }
       }

@@ -15,16 +15,6 @@ struct DeckListView: View {
                     emptyState
                 } else {
                     List {
-                        if !defaultDecks.isEmpty {
-                            Section("Default") {
-                                ForEach(defaultDecks) { deck in
-                                    NavigationLink(deck.name) {
-                                        DeckDetailView(deckId: deck.id)
-                                    }
-                                }
-                                .onDelete { offsets in deleteDecks(offsets, from: defaultDecks) }
-                            }
-                        }
                         if !userDecks.isEmpty {
                             Section("My Decks") {
                                 ForEach(userDecks) { deck in
@@ -33,6 +23,16 @@ struct DeckListView: View {
                                     }
                                 }
                                 .onDelete { offsets in deleteDecks(offsets, from: userDecks) }
+                            }
+                        }
+                        if !defaultDecks.isEmpty {
+                            Section("Default") {
+                                ForEach(defaultDecks) { deck in
+                                    NavigationLink(deck.name) {
+                                        DeckDetailView(deckId: deck.id)
+                                    }
+                                }
+                                .onDelete { offsets in deleteDecks(offsets, from: defaultDecks) }
                             }
                         }
                     }
