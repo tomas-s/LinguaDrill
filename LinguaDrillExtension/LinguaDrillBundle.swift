@@ -5,6 +5,9 @@ import SwiftUI
 struct LinguaDrillBundle: WidgetBundle {
     var body: some Widget {
         LinguaDrill()
+        if #available(iOS 18.0, *) {
+            AddCardControl()
+        }
     }
 }
 

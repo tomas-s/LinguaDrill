@@ -138,6 +138,23 @@
         }
       }
     },
+    "Add Card" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat kartu"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pridať kartu"
+          }
+        }
+      }
+    },
     "Add your first card using +" : {
       "localizations" : {
         "cs" : {
@@ -200,6 +217,39 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zrušiť"
+          }
+        }
+      }
+    },
+    "Choose Deck" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyber balíček"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyber balíček"
+          }
+        }
+      }
+    },
+    "Create a deck first to add cards." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nejprve vytvoř balíček, pak můžeš přidávat karty."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Najprv vytvor balíček, potom môžeš pridávať karty."
           }
         }
       }
@@ -435,6 +485,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Žiadny"
+          }
+        }
+      }
+    },
+    "Opens LinguaDrill to add a new card to your active deck." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře LinguaDrill a přidá novou kartu do aktivního balíčku."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otvorí LinguaDrill a pridá novú kartu do aktívneho balíčka."
           }
         }
       }

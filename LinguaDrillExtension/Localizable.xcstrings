@@ -1,6 +1,40 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Add a new card to your active deck." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidá novou kartu do aktivního balíčku."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pridá novú kartu do aktívneho balíčka."
+          }
+        }
+      }
+    },
+    "Add Card" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat kartu"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pridať kartu"
+          }
+        }
+      }
+    },
     "Flash Card" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -14,6 +48,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Flash Kartička"
+          }
+        }
+      }
+    },
+    "Opens LinguaDrill to add a new card to your active deck." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře LinguaDrill a přidá novou kartu do aktivního balíčku."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otvorí LinguaDrill a pridá novú kartu do aktívneho balíčka."
           }
         }
       }

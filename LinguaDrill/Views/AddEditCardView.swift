@@ -9,6 +9,7 @@ struct AddEditCardView: View {
 
     @State private var phrase = ""
     @State private var translation = ""
+    @FocusState private var phraseFocused: Bool
 
     private let phraseLimit = 40
     private let translationLimit = 80
@@ -24,6 +25,7 @@ struct AddEditCardView: View {
                     HStack(alignment: .center) {
                         TextField("Phrase", text: $phrase)
                             .textInputAutocapitalization(.never)
+                            .focused($phraseFocused)
                             .onChange(of: phrase) { newValue in
                                 let normalized = newValue.lowercasingFirstLetter()
                                 let capped = normalized.count > phraseLimit
@@ -57,6 +59,7 @@ struct AddEditCardView: View {
                     }
                 }
             }
+            .onAppear { phraseFocused = true }
             .navigationTitle("New Card")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

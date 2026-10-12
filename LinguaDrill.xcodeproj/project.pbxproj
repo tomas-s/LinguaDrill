@@ -17,15 +17,20 @@
 		5180C04680A351D29EFCCDC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 97A7FE6569B581B74E6F3543 /* Localizable.xcstrings */; };
 		72E6AF99342D5676CE034215 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8F2AE9C2EA4C0911F0A03 /* WidgetKit.framework */; };
 		75D22FC0DE37344181596C3B /* WidgetSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E71EE1C5370A78086C6CF0 /* WidgetSettings.swift */; };
+		7A0BE81701A02BAD651BB3D1 /* QuickAddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB44A4F9C994E583B8AB660 /* QuickAddCardView.swift */; };
 		7B0EBCAE480726580F175A7C /* DeckDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2752DB0F3F5629EAA1CA3C0 /* DeckDetailView.swift */; };
 		858A4ADA5A5AD91F46C72C86 /* DeckStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0299763C1BC4EEC4749A65 /* DeckStore.swift */; };
+		86E207558E7EE2D71B3D49B1 /* AddCardIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EED5554C6B349AEDCFA8E /* AddCardIntent.swift */; };
 		9115B91800D3722F1483358D /* LinguaDrillBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EC069DD5DB01F880BB969 /* LinguaDrillBundle.swift */; };
+		9D61FA60C618055D99408879 /* AddCardControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C49BEEECF9B9E219F0CD83 /* AddCardControl.swift */; };
 		A47A200AC67B3794D4E5B138 /* DeckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93424573C5F041BE660AB0FB /* DeckListView.swift */; };
 		B2A5E6B2542A7053CFA0595A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563764279557FA249A769549 /* Card.swift */; };
 		B3E730CE40B6C36A40AD8A12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214FF19AD3A63F5446F80C1 /* ContentView.swift */; };
 		B9E1DF7C8DA4A302BF05EA23 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA6A304A03C58E0CC2D1AF3 /* Provider.swift */; };
+		BC0556D92D0DC5C0AEC519CA /* LinguaDrillShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCA660F9FBF92A1F27A3C4 /* LinguaDrillShortcuts.swift */; };
 		D0C2CF74C493DA005692FE50 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563764279557FA249A769549 /* Card.swift */; };
 		D14004E32DBFB22158118486 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8F2AE9C2EA4C0911F0A03 /* WidgetKit.framework */; };
+		D2B3566673475742AD7180E1 /* AddCardIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702EED5554C6B349AEDCFA8E /* AddCardIntent.swift */; };
 		D44D48AF3A6D831934B4444B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E04A8D6FDD13876ACA80EC2 /* SettingsView.swift */; };
 		DAB8F2A86866EBC715C48AE6 /* LinguaDrillEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2610BEDC5134C86CCD2D75 /* LinguaDrillEntryView.swift */; };
 		E236431CF1D7BE0113EA8674 /* LinguaDrillExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5920FA9ACBF3A9DAA65A10AE /* LinguaDrillExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -61,11 +66,13 @@
 /* Begin PBXFileReference section */
 		005735C80A055D3339227301 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		2BC86A7FF9A20FB7B0548CB6 /* AddEditDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditDeckView.swift; sourceTree = "<group>"; };
+		33C49BEEECF9B9E219F0CD83 /* AddCardControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardControl.swift; sourceTree = "<group>"; };
 		4692CC967481E5C8232F0B0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4E04A8D6FDD13876ACA80EC2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		563764279557FA249A769549 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		5920FA9ACBF3A9DAA65A10AE /* LinguaDrillExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LinguaDrillExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5920FA9ACBF3A9DAA65A10AE /* LinguaDrillExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LinguaDrillExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5F849543273158A031E53F /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		702EED5554C6B349AEDCFA8E /* AddCardIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardIntent.swift; sourceTree = "<group>"; };
 		7DCC57ECC1839755D347604D /* AddEditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCardView.swift; sourceTree = "<group>"; };
 		7EF430D554F175959457F125 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		8C6EC069DD5DB01F880BB969 /* LinguaDrillBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinguaDrillBundle.swift; sourceTree = "<group>"; };
@@ -74,6 +81,7 @@
 		96AF0E4FEDA4A6EA13F99518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97A7FE6569B581B74E6F3543 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		98645C0E9AE14588619AF428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9DB44A4F9C994E583B8AB660 /* QuickAddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddCardView.swift; sourceTree = "<group>"; };
 		9F2610BEDC5134C86CCD2D75 /* LinguaDrillEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinguaDrillEntryView.swift; sourceTree = "<group>"; };
 		A3E71EE1C5370A78086C6CF0 /* WidgetSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettings.swift; sourceTree = "<group>"; };
 		A83E024057E556B7A02E59AC /* LinguaDrillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinguaDrillApp.swift; sourceTree = "<group>"; };
@@ -81,7 +89,8 @@
 		B155E90984CF55BAC91424AF /* LinguaDrillExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LinguaDrillExtension.entitlements; sourceTree = "<group>"; };
 		B2752DB0F3F5629EAA1CA3C0 /* DeckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailView.swift; sourceTree = "<group>"; };
 		C214FF19AD3A63F5446F80C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F15D5BAED8D6FC40D03FDAB9 /* LinguaDrill.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LinguaDrill.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BCA660F9FBF92A1F27A3C4 /* LinguaDrillShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinguaDrillShortcuts.swift; sourceTree = "<group>"; };
+		F15D5BAED8D6FC40D03FDAB9 /* LinguaDrill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinguaDrill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F8F2AE9C2EA4C0911F0A03 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		FFA6A304A03C58E0CC2D1AF3 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +125,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		511EC942EABDC164413555E4 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				702EED5554C6B349AEDCFA8E /* AddCardIntent.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
 		5AFF7249485DEEEB534A4CB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +149,7 @@
 				98645C0E9AE14588619AF428 /* Info.plist */,
 				9075EBCB7AD8AAE767923489 /* LinguaDrill.entitlements */,
 				A83E024057E556B7A02E59AC /* LinguaDrillApp.swift */,
+				E7BCA660F9FBF92A1F27A3C4 /* LinguaDrillShortcuts.swift */,
 				97A7FE6569B581B74E6F3543 /* Localizable.xcstrings */,
 				98BF785C0B6A7B91EC772D6F /* Views */,
 			);
@@ -146,6 +164,7 @@
 				C214FF19AD3A63F5446F80C1 /* ContentView.swift */,
 				B2752DB0F3F5629EAA1CA3C0 /* DeckDetailView.swift */,
 				93424573C5F041BE660AB0FB /* DeckListView.swift */,
+				9DB44A4F9C994E583B8AB660 /* QuickAddCardView.swift */,
 				4E04A8D6FDD13876ACA80EC2 /* SettingsView.swift */,
 			);
 			path = Views;
@@ -163,6 +182,7 @@
 		B079F8C51BEBA912991204E7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				511EC942EABDC164413555E4 /* Intents */,
 				5AFF7249485DEEEB534A4CB8 /* Models */,
 				F53D6B85793980FE93EDCA4B /* Storage */,
 			);
@@ -183,6 +203,7 @@
 		F16F2762D64AA8617C448B89 /* LinguaDrillExtension */ = {
 			isa = PBXGroup;
 			children = (
+				33C49BEEECF9B9E219F0CD83 /* AddCardControl.swift */,
 				4692CC967481E5C8232F0B0F /* Info.plist */,
 				8C6EC069DD5DB01F880BB969 /* LinguaDrillBundle.swift */,
 				9F2610BEDC5134C86CCD2D75 /* LinguaDrillEntryView.swift */,
@@ -253,14 +274,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
-				TargetAttributes = {
-					C917215F02EB4C1DADE016C8 = {
-						DevelopmentTeam = "";
-					};
-					D3DFAA1C38A90638BA256054 = {
-						DevelopmentTeam = "";
-					};
-				};
 			};
 			buildConfigurationList = 659026066814171158B079D5 /* Build configuration list for PBXProject "LinguaDrill" */;
 			developmentRegion = en;
@@ -309,6 +322,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D61FA60C618055D99408879 /* AddCardControl.swift in Sources */,
+				86E207558E7EE2D71B3D49B1 /* AddCardIntent.swift in Sources */,
 				B2A5E6B2542A7053CFA0595A /* Card.swift in Sources */,
 				EA12E27A0875207B144E3479 /* Deck.swift in Sources */,
 				414DCCB286328C8E2FD18A47 /* DeckStore.swift in Sources */,
@@ -323,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B3566673475742AD7180E1 /* AddCardIntent.swift in Sources */,
 				019833D4185E17F2DDE3F5E3 /* AddEditCardView.swift in Sources */,
 				3CBC803AC89A3C744F7BB925 /* AddEditDeckView.swift in Sources */,
 				D0C2CF74C493DA005692FE50 /* Card.swift in Sources */,
@@ -332,6 +348,8 @@
 				A47A200AC67B3794D4E5B138 /* DeckListView.swift in Sources */,
 				858A4ADA5A5AD91F46C72C86 /* DeckStore.swift in Sources */,
 				2AD44FE25212AE500F514C55 /* LinguaDrillApp.swift in Sources */,
+				BC0556D92D0DC5C0AEC519CA /* LinguaDrillShortcuts.swift in Sources */,
+				7A0BE81701A02BAD651BB3D1 /* QuickAddCardView.swift in Sources */,
 				D44D48AF3A6D831934B4444B /* SettingsView.swift in Sources */,
 				75D22FC0DE37344181596C3B /* WidgetSettings.swift in Sources */,
 			);
@@ -352,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = LinguaDrillExtension/LinguaDrillExtension.entitlements;
+				DEVELOPMENT_TEAM = 4ZAPJ7C882;
 				INFOPLIST_FILE = LinguaDrillExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -429,6 +448,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LinguaDrill/LinguaDrill.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4ZAPJ7C882;
 				INFOPLIST_FILE = LinguaDrill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = LinguaDrillExtension/LinguaDrillExtension.entitlements;
+				DEVELOPMENT_TEAM = 4ZAPJ7C882;
 				INFOPLIST_FILE = LinguaDrillExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,6 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LinguaDrill/LinguaDrill.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4ZAPJ7C882;
 				INFOPLIST_FILE = LinguaDrill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

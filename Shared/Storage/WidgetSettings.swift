@@ -58,4 +58,9 @@ enum WidgetSettings {
         }
         set { defaults.set(newValue.rawValue, forKey: "interval") }
     }
+
+    static var pendingAddCard: Bool {
+        get { defaults.bool(forKey: "pendingAddCard") }
+        set { defaults.set(newValue, forKey: "pendingAddCard") }
+    }
 }
