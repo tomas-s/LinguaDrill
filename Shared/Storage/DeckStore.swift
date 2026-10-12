@@ -51,36 +51,4 @@ final class DeckStore: ObservableObject {
         decks[index] = deck
         save()
     }
-
-    // MARK: – Default deck seeding
-
-    func seedDefaultsIfNeeded() {
-        guard !WidgetSettings.defaultsSeeded else { return }
-        guard
-            let url = Bundle.main.url(forResource: "DefaultDecks", withExtension: "json"),
-            let data = try? Data(contentsOf: url),
-            let imported = try? JSONDecoder().decode([SeedDeck].self, from: data)
-        else { return }
-
-        let defaults = imported.map { d in
-            Deck(
-                name: d.name,
-                cards: d.cards.map { Card(phrase: $0.phrase, translation: $0.translation) },
-                isDefault: true
-            )
-        }
-        decks.insert(contentsOf: defaults, at: 0)
-        save()
-        WidgetSettings.defaultsSeeded = true
-    }
-}
-
-// MARK: – Private helpers for seeding
-private struct SeedDeck: Codable {
-    let name: String
-    let cards: [SeedCard]
-}
-private struct SeedCard: Codable {
-    let phrase: String
-    let translation: String
 }

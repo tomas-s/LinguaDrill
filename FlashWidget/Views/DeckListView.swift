@@ -5,9 +5,6 @@ struct DeckListView: View {
     @EnvironmentObject var store: DeckStore
     @State private var showingAdd = false
 
-    private var defaultDecks: [Deck] { store.decks.filter { $0.isDefault } }
-    private var userDecks: [Deck]    { store.decks.filter { !$0.isDefault } }
-
     var body: some View {
         NavigationStack {
             Group {
@@ -15,26 +12,12 @@ struct DeckListView: View {
                     emptyState
                 } else {
                     List {
-                        if !userDecks.isEmpty {
-                            Section("My Decks") {
-                                ForEach(userDecks) { deck in
-                                    NavigationLink(deck.name) {
-                                        DeckDetailView(deckId: deck.id)
-                                    }
-                                }
-                                .onDelete { offsets in deleteDecks(offsets, from: userDecks) }
+                        ForEach(store.decks) { deck in
+                            NavigationLink(deck.name) {
+                                DeckDetailView(deckId: deck.id)
                             }
                         }
-                        if !defaultDecks.isEmpty {
-                            Section("Default") {
-                                ForEach(defaultDecks) { deck in
-                                    NavigationLink(deck.name) {
-                                        DeckDetailView(deckId: deck.id)
-                                    }
-                                }
-                                .onDelete { offsets in deleteDecks(offsets, from: defaultDecks) }
-                            }
-                        }
+                        .onDelete { offsets in deleteDecks(offsets, from: store.decks) }
                     }
                 }
             }

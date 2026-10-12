@@ -58,9 +58,4 @@ enum WidgetSettings {
         }
         set { defaults.set(newValue.rawValue, forKey: "interval") }
     }
-
-    static var defaultsSeeded: Bool {
-        get { defaults.bool(forKey: "defaultsSeeded") }
-        set { defaults.set(newValue, forKey: "defaultsSeeded") }
-    }
 }

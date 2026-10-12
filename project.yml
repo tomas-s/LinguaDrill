@@ -22,8 +22,6 @@ targets:
     sources:
       - path: FlashWidget
       - path: Shared
-    resources:
-      - path: FlashWidget/Resources/DefaultDecks.json
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.slizik.flashwidget

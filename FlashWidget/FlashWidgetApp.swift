@@ -9,7 +9,6 @@ struct FlashWidgetApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(deckStore)
-                .task { deckStore.seedDefaultsIfNeeded() }
                 .environment(\.locale, resolvedLocale)
         }
     }
