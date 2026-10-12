@@ -4,6 +4,7 @@ import WidgetKit
 struct DeckListView: View {
     @EnvironmentObject var store: DeckStore
     @State private var showingAdd = false
+    @State private var activeDeckId: UUID? = WidgetSettings.selectedDeckId
 
     var body: some View {
         NavigationStack {
@@ -12,12 +13,16 @@ struct DeckListView: View {
                     emptyState
                 } else {
                     List {
-                        ForEach(store.decks) { deck in
-                            NavigationLink(deck.name) {
-                                DeckDetailView(deckId: deck.id)
+                        if !activeDecks.isEmpty {
+                            Section("Active Deck") {
+                                deckRows(activeDecks)
                             }
                         }
-                        .onDelete { offsets in deleteDecks(offsets, from: store.decks) }
+                        if !inactiveDecks.isEmpty {
+                            Section("Inactive Decks") {
+                                deckRows(inactiveDecks)
+                            }
+                        }
                     }
                 }
             }
@@ -31,7 +36,33 @@ struct DeckListView: View {
             .sheet(isPresented: $showingAdd) {
                 AddEditDeckView()
             }
+            .onAppear { activeDeckId = WidgetSettings.selectedDeckId }
         }
+    }
+
+    private var activeDecks: [Deck] {
+        store.decks.filter { $0.id == activeDeckId }
+    }
+
+    private var inactiveDecks: [Deck] {
+        store.decks.filter { $0.id != activeDeckId }
+    }
+
+    private func deckRows(_ decks: [Deck]) -> some View {
+        ForEach(decks) { deck in
+            NavigationLink {
+                DeckDetailView(deckId: deck.id)
+            } label: {
+                deckRow(deck)
+            }
+            .listRowBackground(deck.id == activeDeckId ? Color.accentColor.opacity(0.15) : nil)
+        }
+        .onDelete { offsets in deleteDecks(offsets, from: decks) }
+    }
+
+    private func deckRow(_ deck: Deck) -> some View {
+        Text(deck.name)
+            .fontWeight(deck.id == activeDeckId ? .semibold : .regular)
     }
 
     private var emptyState: some View {
@@ -53,6 +84,7 @@ struct DeckListView: View {
             store.deleteDeck(id: id)
             if WidgetSettings.selectedDeckId == id {
                 WidgetSettings.selectedDeckId = nil
+                activeDeckId = nil
                 WidgetSettings.currentCardIndex = 0
                 WidgetCenter.shared.reloadAllTimelines()
             }

@@ -289,6 +289,23 @@
         }
       }
     },
+    "Inactive Decks" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neaktivní balíčky"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neaktívne balíčky"
+          }
+        }
+      }
+    },
     "Invalid JSON format. Please check the file structure." : {
       "extractionState" : "stale",
       "localizations" : {
