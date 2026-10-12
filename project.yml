@@ -46,3 +46,24 @@ targets:
     dependencies:
       - sdk: WidgetKit.framework
       - sdk: SwiftUI.framework
+
+schemes:
+  FlashWidget:
+    build:
+      targets:
+        FlashWidget: all
+    run:
+      config: Debug
+    archive:
+      config: Release
+
+  FlashWidgetExtension:
+    build:
+      targets:
+        FlashWidgetExtension: all
+        FlashWidget: all
+    run:
+      config: Debug
+      executable: FlashWidget
+    archive:
+      config: Release
