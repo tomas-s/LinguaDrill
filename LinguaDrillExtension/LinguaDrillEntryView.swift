@@ -1,7 +1,7 @@
 import SwiftUI
 import WidgetKit
 
-struct FlashWidgetEntryView: View {
+struct LinguaDrillEntryView: View {
     let entry: FlashEntry
 
     @Environment(\.widgetFamily) private var family

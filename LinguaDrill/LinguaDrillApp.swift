@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct FlashWidgetApp: App {
+struct LinguaDrillApp: App {
     @StateObject private var deckStore = DeckStore()
     @AppStorage("appLanguage") private var appLanguage: String = "system"
 

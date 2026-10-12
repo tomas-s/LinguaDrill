@@ -32,7 +32,7 @@ enum CardInterval: String, CaseIterable, Codable {
 }
 
 enum WidgetSettings {
-    static let appGroupIdentifier = "group.com.slizik.flashwidget"
+    static let appGroupIdentifier = "group.com.slizik.linguadrill"
 
     private static var defaults: UserDefaults {
         UserDefaults(suiteName: appGroupIdentifier) ?? .standard

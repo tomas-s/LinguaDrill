@@ -1,4 +1,4 @@
-name: FlashWidget
+name: LinguaDrill
 
 options:
   bundleIdPrefix: com.slizik
@@ -16,54 +16,54 @@ settings:
     DEVELOPMENT_TEAM: ""
 
 targets:
-  FlashWidget:
+  LinguaDrill:
     type: application
     platform: iOS
     sources:
-      - path: FlashWidget
+      - path: LinguaDrill
       - path: Shared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.slizik.flashwidget
-        INFOPLIST_FILE: FlashWidget/Info.plist
-        CODE_SIGN_ENTITLEMENTS: FlashWidget/FlashWidget.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.slizik.linguadrill
+        INFOPLIST_FILE: LinguaDrill/Info.plist
+        CODE_SIGN_ENTITLEMENTS: LinguaDrill/LinguaDrill.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     dependencies:
-      - target: FlashWidgetExtension
+      - target: LinguaDrillExtension
       - sdk: WidgetKit.framework
 
-  FlashWidgetExtension:
+  LinguaDrillExtension:
     type: app-extension
     platform: iOS
     sources:
-      - path: FlashWidgetExtension
+      - path: LinguaDrillExtension
       - path: Shared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.slizik.flashwidget.widget
-        INFOPLIST_FILE: FlashWidgetExtension/Info.plist
-        CODE_SIGN_ENTITLEMENTS: FlashWidgetExtension/FlashWidgetExtension.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.slizik.linguadrill.widget
+        INFOPLIST_FILE: LinguaDrillExtension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: LinguaDrillExtension/LinguaDrillExtension.entitlements
     dependencies:
       - sdk: WidgetKit.framework
       - sdk: SwiftUI.framework
 
 schemes:
-  FlashWidget:
+  LinguaDrill:
     build:
       targets:
-        FlashWidget: all
+        LinguaDrill: all
     run:
       config: Debug
     archive:
       config: Release
 
-  FlashWidgetExtension:
+  LinguaDrillExtension:
     build:
       targets:
-        FlashWidgetExtension: all
-        FlashWidget: all
+        LinguaDrillExtension: all
+        LinguaDrill: all
     run:
       config: Debug
-      executable: FlashWidget
+      executable: LinguaDrill
     archive:
       config: Release

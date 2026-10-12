@@ -2,18 +2,18 @@ import WidgetKit
 import SwiftUI
 
 @main
-struct FlashWidgetBundle: WidgetBundle {
+struct LinguaDrillBundle: WidgetBundle {
     var body: some Widget {
-        FlashWidget()
+        LinguaDrill()
     }
 }
 
-struct FlashWidget: Widget {
-    let kind = "FlashWidget"
+struct LinguaDrill: Widget {
+    let kind = "LinguaDrill"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: FlashProvider()) { entry in
-            FlashWidgetEntryView(entry: entry)
+            LinguaDrillEntryView(entry: entry)
         }
         .configurationDisplayName("Flash Card")
         .description("Shows the current card from your deck.")

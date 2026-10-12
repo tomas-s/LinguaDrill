@@ -4,7 +4,7 @@
 <dict>
     <key>com.apple.security.application-groups</key>
     <array>
-        <string>group.com.slizik.flashwidget</string>
+        <string>group.com.slizik.linguadrill</string>
     </array>
 </dict>
 </plist>
